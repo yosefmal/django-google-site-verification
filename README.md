@@ -24,14 +24,14 @@ To setup your google site verification html file just add to your settings
 
 and import GOOGLE_SITE_VERIFICATION_URL in your URLConf
 
-    from django.conf.urls import url
+    from django.urls import re_path
     from google_site_verification import GOOGLE_SITE_VERIFICATION_URL
 
     from . import views
 
 
     urlpatterns = [
-        url(r'^$', views.home, name='home'),
+        re_path(r'^$', views.home, name='home'),
         GOOGLE_SITE_VERIFICATION_URL
     ]
 
